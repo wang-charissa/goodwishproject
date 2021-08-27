@@ -8,7 +8,7 @@ import {
 
 import logo from './logo.svg';
 import './App.css';
-import Headers from './nav/Headers';
+import Headers from './nav/Header';
 import Home from './components/Home';
 import About from './components/About';
 
@@ -19,7 +19,7 @@ function App() {
         <Headers />
         <div className="container">
           <Switch>
-            <Route exact path="/">
+            <Route path="/">
               <Home />
             </Route>
             <Route path="/about">
