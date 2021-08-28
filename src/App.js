@@ -9,8 +9,10 @@ import {
 import logo from './logo.svg';
 import './App.css';
 import Headers from './nav/Header';
-import Home from './components/Home';
 import About from './components/About';
+import Missions from './components/Missions';
+import Volunteers from './components/Volunteers';
+import Events from './components/Events';
 
 function App() {
   return (
@@ -19,11 +21,20 @@ function App() {
         <Headers />
         <div className="container">
           <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
+            <Route exact path="/">
               <About />
+            </Route>
+            <Route path="/who-we-are">
+              <About />
+            </Route>
+            <Route path="/what-we-do">
+              <Missions />
+            </Route>
+            <Route path="/volunteers">
+              <Volunteers />
+            </Route>
+            <Route path="/programs">
+              <Events />
             </Route>
           </Switch>
         </div>
